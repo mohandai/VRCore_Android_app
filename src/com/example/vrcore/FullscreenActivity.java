@@ -52,7 +52,7 @@ public class FullscreenActivity extends Activity {
 
 		setContentView(R.layout.activity_fullscreen);
 
-		final View controlsView = findViewById(R.id.fullscreen_content_controls);
+		//final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
 
 		// Set up an instance of SystemUiHider to control the system UI for
@@ -75,22 +75,22 @@ public class FullscreenActivity extends Activity {
 							// in-layout UI controls at the bottom of the
 							// screen.
 							if (mControlsHeight == 0) {
-								mControlsHeight = controlsView.getHeight();
+								//mControlsHeight = controlsView.getHeight();
 							}
 							if (mShortAnimTime == 0) {
 								mShortAnimTime = getResources().getInteger(
 										android.R.integer.config_shortAnimTime);
 							}
-							controlsView
+							/*controlsView
 									.animate()
 									.translationY(visible ? 0 : mControlsHeight)
-									.setDuration(mShortAnimTime);
+									.setDuration(mShortAnimTime);*/
 						} else {
 							// If the ViewPropertyAnimator APIs aren't
 							// available, simply show or hide the in-layout UI
 							// controls.
-							controlsView.setVisibility(visible ? View.VISIBLE
-									: View.GONE);
+						/*	controlsView.setVisibility(visible ? View.VISIBLE
+									: View.GONE);*/
 						}
 
 						if (visible && AUTO_HIDE) {
@@ -102,7 +102,7 @@ public class FullscreenActivity extends Activity {
 
 		WebView webview = (WebView) findViewById(R.id.webView01);
 		webview.getSettings().setJavaScriptEnabled(true);
-		String url = "http://uclvrcore1.cloudapp.net/static/index.htm";
+		String url = "http://uclvrcore.cloudapp.net/static/index.htm";
 		webview.loadUrl(url);
 		
 		// Set up the user interaction to manually show or hide the system UI.
@@ -120,8 +120,8 @@ public class FullscreenActivity extends Activity {
 		// Upon interacting with UI controls, delay any scheduled hide()
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
-		findViewById(R.id.dummy_button).setOnTouchListener(
-				mDelayHideTouchListener);
+		/*findViewById(R.id.dummy_button).setOnTouchListener(
+				mDelayHideTouchListener);*/
 	}
 
 	@Override
