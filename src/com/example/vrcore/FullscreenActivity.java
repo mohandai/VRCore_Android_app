@@ -102,7 +102,7 @@ public class FullscreenActivity extends Activity {
 
 		WebView webview = (WebView) findViewById(R.id.webView01);
 		webview.getSettings().setJavaScriptEnabled(true);
-		String url = "http://uclvrcore.cloudapp.net/static/index.htm";
+		String url = "http://uclvrcore.cloudapp.net/static/";
 		webview.loadUrl(url);
 		
 		// Set up the user interaction to manually show or hide the system UI.
